@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body  onload="currentTime()">
+    <div class="container">
+        <div class="watch_body">
+            <div class="watch_face">X</div>
+            <div id = "clock" class="clock"></div>
+        </div>
+        <div class="glass"></div>
+        <div class="strap1"></div>
+        <div class="strap2">
+            <div class="holes">
+                <div class="circle"></div><br>
+                <div class="circle"></div><br>
+                <div class="circle"></div><br>
+                <div class="circle"></div><br>
+                <div class="circle"></div>
+            </div>
+        </div>
+        <div class="clip">
+            <div class="pin"></div>
+        </div>
+    <p class="logo">@aditya_ekhande_</p>
+
+    </div>
+</body>
+</html>
+<script>
+    function currentTime() {
+    let date = new Date(); 
+    let hh = date.getHours();
+    let mm = date.getMinutes();
+    let ss = date.getSeconds();
+    let session = "";
+  
+    if(hh == 0){
+        hh = 12;
+    }
+    if(hh > 12){
+        hh = hh - 12;
+        session = "";
+     }
+  
+     hh = (hh < 10) ? "0" + hh : hh;
+     mm = (mm < 10) ? "0" + mm : mm;
+     ss = (ss < 10) ? "0" + ss : ss;
+      
+     let time = hh + ":" + mm + "\n" + ss + " " + session;
+  
+    document.getElementById("clock").innerText = time; 
+    let t = setTimeout(function(){ currentTime() }, 1000);
+  }
+</script>
