@@ -62,7 +62,7 @@ body{
 .strap2{
     height: 350px;
     width: 100px;
-    background: linear-gradient(black,rgb(56, 54, 54));
+    background: linear-gradient(rgb(56, 54, 54),black);
     position: absolute;
     top: 50%;
     left: 50%;
